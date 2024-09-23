@@ -33,6 +33,6 @@ jobs:
           EOF
 
       - name: Upload Github Release
-        run: gh release create "${GITHUB_REF}" --notes --notes-file release.md dist/*
+        run: gh release create "${GITHUB_REF}" --notes-file release.md dist/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
