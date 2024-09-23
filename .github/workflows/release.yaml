@@ -23,13 +23,13 @@ jobs:
       - run: |
           SHA256=$(cat dist/sqlc-gen-python-orm.wasm.sha256)
           cat > release.md <<- EOF
-          ```
-          plugins:
-          - name: py
-          wasm:
-            url: https://github.com/veltiosoft/sqlc-gen-python-orm/releases/download/${GITHUB_REF}/sqlc-gen-python-orm.wasm
-            sha256: ${SHA256}
-          ```
+          "```"
+          "plugins:"
+          "- name: py"
+          "wasm:"
+          "  url: https://github.com/veltiosoft/sqlc-gen-python-orm/releases/download/${GITHUB_REF}/sqlc-gen-python-orm.wasm"
+          "  sha256: ${SHA256}"
+          "```"
           EOF
 
       - name: Upload Github Release
